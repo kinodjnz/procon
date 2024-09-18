@@ -12,7 +12,9 @@ fn solve(frequencies: &[i64], key_sizes: &[i64]) -> i64 {
     if keystrokes.len() < frequencies.len() {
         return -1;
     }
-    frequencies.iter().zip(keystrokes.iter())
+    frequencies
+        .iter()
+        .zip(keystrokes.iter())
         .map(|(frequency, keystroke)| frequency * keystroke)
         .sum()
 }
